@@ -11,8 +11,8 @@ const Header = () => {
         <nav>
           <ul>
             <li><Link to="/search"><FaSearch /></Link></li>
-            <li><Link to="/appointments">Proffessionel Santé</Link></li>
-            <li><Link to="/profile"><FaUserCircle /></Link></li>
+            <li><Link to="/login">Proffessionel Santé</Link></li>
+            <li><Link to="/login"><FaUserCircle /></Link></li>
           </ul>
         </nav>
       </div>

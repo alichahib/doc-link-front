@@ -1,24 +1,21 @@
-// App.js
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './component/Header';
-import Banner from './component/Banner';
-import Services from './component/Services';
-import Testimonials from './component/Testimonials';
-import DoctorsList from './component/DoctorsList';
-import ContactSection from './component/ContactSection'
-import Footer from './component/Footer';
+import LoginPage from './pages/LoginPage'; // Import the Login component
 import MainSelection from './component/MainSelection';
-// App.js or index.js
-import './App.css';
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <MainSelection />
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <MainSelection />
+        <Switch>
+          <Route path="/login" component={LoginPage} />
+        </Switch>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
