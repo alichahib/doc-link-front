@@ -1,0 +1,70 @@
+/* mainSection.css */
+.input-field input[type=text]:focus + label {
+    color: #42a5f5;
+  }
+
+  .container {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Alignement des éléments sur l'axe horizontal */
+    align-items: center; /* Alignement des éléments sur l'axe vertical */
+  }  
+  
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #42a5f5;
+  }
+  
+  .input-field input[type=text] {
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: none;
+  }
+  
+  .image-container {
+    text-align: center;
+  }
+
+    /* label color */
+    .input-field label {
+      color: #000;
+    }
+    /* label focus color */
+    .input-field input[type=text]:focus + label {
+      color: #000;
+    }
+    /* label underline focus color */
+    .input-field input[type=text]:focus {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    /* valid color */
+    .input-field input[type=text].valid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    /* invalid color */
+    .input-field input[type=text].invalid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+    /* icon prefix focus color */
+    .input-field .prefix.active {
+      color: #000;
+    }
+
+    .main-selection-container {
+      position: absolute;
+      height: 100%; /* Ajustez la hauteur du conteneur selon vos besoins */
+      width: 100%;
+      height:100%;
+      background-color: #284345;
+    }
+    
+    .background-image {
+      position: fixed;
+      top: 13px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-image: url('../image/medecin.png'); /* Remplacez "url_de_votre_image.jpg" par le chemin de votre image */
+      opacity: 0.7; /* Optionnel : pour ajuster l'opacité de l'image */
+    }
+  

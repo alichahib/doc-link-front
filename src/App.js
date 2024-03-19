@@ -7,17 +7,16 @@ import Testimonials from './component/Testimonials';
 import DoctorsList from './component/DoctorsList';
 import ContactSection from './component/ContactSection'
 import Footer from './component/Footer';
+import MainSelection from './component/MainSelection';
+// App.js or index.js
+import './App.css';
+
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Banner />
-      <Services />
-      <Testimonials />
-      <DoctorsList />
-      <ContactSection/>
-      <Footer />
+      <MainSelection />
     </div>
   );
 }

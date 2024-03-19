@@ -1,15 +1,27 @@
-.App {
-  text-align: center;
+nav {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.brand-logo {
+  margin-left: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav ul li a {
+  padding: 0 15px;
+}
+
+nav ul li a:hover {
+  background-color: #1976d2; /* Darker shade of blue */
+}
+
+.sidenav-trigger i {
+  color: hsl(0, 0%, 100%); /* White color for the menu icon */
+}
+
+/* Adjust styles for mobile */
+@media only screen and (max-width: 992px) {
+  nav ul li a {
+    padding: 15px;
   }
 }
 

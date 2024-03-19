@@ -1,0 +1,54 @@
+/* Styles for Header */
+.header {
+    background-color: #0062FF; /* Couleur de fond */
+    padding: 15px 0; /* Espacement interne */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header appears above other content */
+  }
+  
+  .container {
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Alignement des éléments sur l'axe horizontal */
+    align-items: center; /* Alignement des éléments sur l'axe vertical */
+  }
+  
+  .logo {
+    font-size: 24px; /* Taille de la police pour le logo */
+    text-decoration: none; /* Supprimer la décoration de lien */
+  }
+  
+  nav ul {
+    list-style-type: none; /* Supprimer les puces de liste */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments de la navigation */
+  }
+  
+  nav ul li {
+    margin-right: 20px; /* Espacement entre les éléments de navigation */
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0; /* Supprimer l'espacement du dernier élément de navigation */
+  }
+  
+  nav ul li a {
+    color: #FFF; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprimer la décoration de lien */
+    font-size: 18px; /* Taille de la police des liens */
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline; /* Ajouter une soulignement au survol */
+  }
+  
+  /* Styles for Icons */
+  nav ul li a svg {
+    font-size: 24px; /* Taille des icônes */
+    vertical-align: middle; /* Alignement vertical au milieu */
+    margin-right: 5px; /* Espacement à droite des icônes */
+  }
+  

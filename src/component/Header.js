@@ -1,19 +1,23 @@
-// Header.js
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaSearch, FaUserCircle } from 'react-icons/fa';
+import '../styles/styles.css'; // Importer le fichier CSS
 
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">Doclink</div>
-      <nav className="navigation">
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#doctors">Doctors</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div className="container">
+        <Link to="/" className="logo">Mon Application Santé</Link>
+        <nav>
+          <ul>
+            <li><Link to="/search"><FaSearch /></Link></li>
+            <li><Link to="/appointments">Proffessionel Santé</Link></li>
+            <li><Link to="/profile"><FaUserCircle /></Link></li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
-}
+};
 
 export default Header;
