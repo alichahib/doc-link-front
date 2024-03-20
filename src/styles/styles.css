@@ -1,5 +1,6 @@
 /* Styles for Header */
 .header {
+  display: flex; /* Utilisation de Flexbox pour aligner les éléments */
     background-color: #0062FF; /* Couleur de fond */
     padding: 15px 0; /* Espacement interne */
     position: fixed;
@@ -7,6 +8,8 @@
     left: 0;
     width: 100%;
     z-index: 1000; /* Ensure the header appears above other content */
+    justify-content: space-between; /* Alignement des éléments sur l'axe horizontal */
+    align-items: center; /* Alignement des éléments sur l'axe vertical */
   }
   
   .container {

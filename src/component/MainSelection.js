@@ -14,6 +14,9 @@ const MainSelection = () => {
       <div className="input-container">
         <input type="text" placeholder="Service" className="service-input" />
         <input type="text" placeholder="Location" className="location-input" />
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
         <button className="location_searching" onClick={() => {console.log("ddd")}}>
         </button>
       </div>

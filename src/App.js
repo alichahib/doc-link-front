@@ -1,19 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './component/Header';
-import LoginPage from './pages/LoginPage'; // Import the Login component
-import MainSelection from './component/MainSelection';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Login from './pages/Login'; // Import the Login component
+import HomePage from './pages/HomePage';
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <Header />
-        <MainSelection />
-        <Switch>
-          <Route path="/login" component={LoginPage} />
-        </Switch>
-      </div>
+          <Route path="/login" component={Login} />
+          <Route path="/" component={HomePage} />
     </Router>
   );
 };
