@@ -1,11 +1,31 @@
 // pages/HomePage.js
 
-import React from 'react';
+import React, {useEffect} from 'react';
+import Layout from '../component/layout';
+import axios from 'axios'
 
 function HomePage() {
+  const getUserData = async () => {
+
+    try {
+      const res = await axios.post('http://localhost:3000/user/getUserData',{},{
+        headers:{
+          authorization: 'Bearer ' +localStorage.getItem("token")
+        }
+      })
+      console.log('jsjhshklsklkj');
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+  useEffect(()=>{
+    getUserData()
+  },[])
   return (
-    <div className="home-page">
-    </div>
+     <Layout>
+      <h1>Home Page</h1>
+     </Layout>
   );
 }
 

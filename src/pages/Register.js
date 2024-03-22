@@ -1,18 +1,16 @@
 import React from "react"
-import { Input, Form, message } from "antd";
+import { Input, Form, Select, message } from "antd";
 import axios from 'axios'
 import '../styles/registerStyles.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const Login =  (values)=>{
-    const navigate = useNavigate();
+const Register =  (values)=>{
     const onFinishHandler= async (values)=>{
 try {
-    const res = await axios.post('http://localhost:3000/user',values)
+    console.log('kjhdqjqljhqskllksqjsqdk')
+    const res = await axios.put('http://localhost:3000/user',values)
     if(res.data.success){
-        message.success('Register well');
-        localStorage.setItem("token",res.data.token)
-        navigate('/');
+        message.success('Register well')
     }
 } catch (error) {
     console.log(error);
@@ -50,6 +48,38 @@ try {
       <Input />
     </Form.Item>
 
+    <Form.Item
+      label="email"
+      name="email"
+      rules={[
+        {
+            type: 'email',
+          required: true,
+          message: 'Please input your email!',
+        },
+      ]}
+    >
+      <Input />
+    </Form.Item>
+
+    <Form.Item
+      label="phoneNumber"
+      name="phoneNumber"
+      rules={[
+        {
+          required: true,
+          message: 'Please input your phone!',
+        },
+      ]}
+    >
+      <Input />
+    </Form.Item>
+    <Form.Item label="type" name="type">
+        <Select>
+          <Select.Option value="professionel">professionel</Select.Option>
+          <Select.Option value="particulier">particulier</Select.Option>
+        </Select>
+      </Form.Item>
 
     <Form.Item
       label="Password"
@@ -64,6 +94,15 @@ try {
       <Input.Password />
     </Form.Item>
 
+    <Form.Item
+      name="remember"
+      valuePropName="checked"
+      wrapperCol={{
+        offset: 8,
+        span: 16,
+      }}
+    >
+    </Form.Item>
 
     <Form.Item
       wrapperCol={{
@@ -71,6 +110,7 @@ try {
         span: 16,
       }}
     >
+    <Link to='/login' className="m-2">Already user login here</Link>
       <button className="btn btn-primary" type="submit">
         Submit
       </button>
@@ -81,4 +121,4 @@ try {
     )
 }
 
-export default Login;
+export default Register;
