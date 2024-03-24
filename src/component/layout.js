@@ -29,7 +29,8 @@ const Layout = ({children})=>{
             <div className="content">
                 <div className="header">
                     <div className="header-content">
-                        <Link to='/'>{JSON.stringify(user)}</Link>
+                        <i class="fa-solid fa-bell"></i>
+                        <Link to='/'>{user?.user?.email}</Link>
                     </div>
                     </div>
                 <div className="body">{children}</div>

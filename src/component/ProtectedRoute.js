@@ -17,26 +17,24 @@ const ProtectedRoute=({children})=>{
                dispatch(setUser(res.data.data))
             }
             else{
+                localStorage.clear();
                 <Navigate to='/login'/>
             }
         } catch (error) {
+            localStorage.clear();
             console.log(error)
         }
 
     }
 
     useEffect(()=>{
-        console.log(user.user)
         if(!user.user){
         getUser()
     }
     },[[user]])
     if(localStorage.getItem("token")){
-        console.log('rrydss')
-        console.log(localStorage.getItem("token"))
         return children;
     }else{
-        console.log('kqdlmkmlsqdlmklsmdkqls');
        return  <Navigate to='/login'/>
     }
 } 

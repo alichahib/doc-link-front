@@ -13,7 +13,6 @@ function HomePage() {
           authorization: 'Bearer ' +localStorage.getItem("token")
         }
       })
-      console.log('jsjhshklsklkj');
     } catch (error) {
       console.log(error)
     }

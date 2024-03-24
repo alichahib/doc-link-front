@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const Register =  (values)=>{
     const onFinishHandler= async (values)=>{
 try {
-    console.log('kjhdqjqljhqskllksqjsqdk')
     const res = await axios.put('http://localhost:3000/user',values)
     if(res.data.success){
         message.success('Register well')

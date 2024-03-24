@@ -25,7 +25,7 @@
 .header {
 height:10vh;
 margin: 20px;;
-background-color: rgb(1, 26, 51);
+background-color: white;
 box-shadow: 0 0 2px grey;
 
 }
@@ -66,7 +66,25 @@ h3 {
     font-size: 1.2rem;
 }
 
-.active {
-    background-color: white;
-    color: rgba(1, 51, 47, 0.853);
+.active a,
+
+.active i {
+    color:rgb(51,1,1)
+}
+
+.header-content {
+    margin: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+
+}
+
+.header-content i {
+    text-decoration: none;
+    color: blue;
+    text-transform: uppercase;
+    margin:0 10px;
+    font-size: 1.5rem;
 }
