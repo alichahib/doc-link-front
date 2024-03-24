@@ -6,10 +6,13 @@ export const userSlice = createSlice({
         user:null
     },
     reducers:{
-        getUser:(state,action)=>{
+        setUser:(state,action)=>{
+            console.log('inside the setUser Slive')
+            console.log(state)
+            console.log(action)
             state.user=action.payload
         }
     }
 })
 
-export const {getUser} = userSlice.actions;
+export const {setUser} = userSlice.actions;

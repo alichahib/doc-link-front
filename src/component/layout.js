@@ -2,8 +2,10 @@ import React from "react";
 import '../styles/layoutStyles.css'
 import { sideBarMenu } from "../Data/Data";
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux";
 
 const Layout = ({children})=>{
+    const user=useSelector(state=>state.user)
     return(
         <div className="main">
             <div className="layout">
@@ -25,7 +27,11 @@ const Layout = ({children})=>{
                 </div>
             </div>
             <div className="content">
-                <div className="header">Header</div>
+                <div className="header">
+                    <div className="header-content">
+                        <Link to='/'>{JSON.stringify(user)}</Link>
+                    </div>
+                    </div>
                 <div className="body">{children}</div>
             </div>
 
