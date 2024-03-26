@@ -65,16 +65,11 @@ try {
     </Form.Item>
 
 
-    <Form.Item
-      wrapperCol={{
-        offset: 8,
-        span: 16,
-      }}
-    >
-      <button className="btn btn-primary" type="submit">
+    <div>
+<button className="btn btn-primary aign" type="submit">
         Submit
       </button>
-    </Form.Item>
+</div>
   </Form>
             </div>
         </>

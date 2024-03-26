@@ -1,0 +1,12 @@
+.align-center{
+    text-align: center;
+}
+.align{
+    align-self: center;
+}
+
+.from-container {
+    display: flex;
+    align-self: center;
+
+}
