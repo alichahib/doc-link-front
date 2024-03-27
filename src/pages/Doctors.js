@@ -3,14 +3,11 @@ import { Table } from "antd";
 import { useSelector } from "react-redux";
 import Layout from "../component/layout";
 import { useLocation } from 'react-router-dom';
+import { event } from 'jquery';
 
 const Doctors = ()=>{
-  const state = useLocation();
-  const doctors = useSelector(state=>state.doctors)
-  console.log(state)
-  //const {doctors,user} = state;
-  console.log(state.state.doctors)
-  const test = state.state.doctors;
+  const location = useLocation();
+  const test = location.state;
  // 
   const columns = [{
     title:"email",
@@ -24,9 +21,15 @@ const Doctors = ()=>{
     return(
             <Layout>
                     <h1>
-                        Doctors list
+                        Détails professionel santé
                     </h1>
-                    <Table columns={columns} dataSource={test}></Table>
+                    <Table columns={columns} dataSource={test}   onRow={(record, rowIndex) => {
+    return {
+      onClick: (event) => {
+        console.log('jshjkhsdjhjsh')
+      }, // click row
+    };
+  }}></Table>
 
             </Layout>
     )

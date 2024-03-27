@@ -16,7 +16,7 @@ const ResearchDoctor = ()=>{
             if(res.data.success){
                 console.log(res.data)
                 console.log(res.data.data)
-                 navigate('/doctors',{state:{doctors:res.data.data}});
+                 navigate('/doctors',{state:res.data.data});
             }
         } catch (error) {
             console.log(error);

@@ -15,11 +15,6 @@ export const sideBarMenu = [
         icon:'fa-solid fa-user-doctor'
     },
     {
-        name:'Profile',
-        path:'/profile',
-        icon:'fa-solid fa-user'
-    },
-    {
         name:'Research Doctor',
         path:'/doctor-research',
         icon:'fa-solid fa-map-location'

@@ -3,6 +3,7 @@ import {  Route, Routes } from 'react-router-dom';
 import Login from './pages/Login'; // Import the Login component
 import HomePage from './pages/HomePage';
 import Doctors from './pages/Doctors';
+import Doctor from './pages/Doctor';
 import ApplyDoctor from './pages/ApplyDoctor';
 import ResearchDoctor from './pages/ResearchDoctor';
 import Register from './pages/Register';
@@ -21,6 +22,7 @@ const App = () => {
 <Route path="/login" element={<PublicRoute><Login/></PublicRoute>} />
 <Route path="/register" element={<PublicRoute><Register/></PublicRoute>} />
 <Route path="/doctors" element={<ProtectedRoute><Doctors/></ProtectedRoute>} />
+<Route path="/doctor" element={<ProtectedRoute><Doctor/></ProtectedRoute>} />
           
           
       </Routes>

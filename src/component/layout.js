@@ -30,7 +30,8 @@ const Layout = ({children})=>{
                 <div className="header">
                     <div className="header-content">
                         <i class="fa-solid fa-bell"></i>
-                        <Link to='/'>{user?.user?.email}</Link>
+                        <i class="fa-solid fa-user"></i>
+                        <Link to='/'>{user?.user?.email}</Link>                       
                     </div>
                     </div>
                 <div className="body">{children}</div>
